@@ -17,3 +17,63 @@ some example of testing and related code r in testing file
 
 ## must change the db setting for testing environment 
 
+## example 
+
+```php
+public function test_student_add_faild_validation_api()
+    {
+        $response = $this->post('/api/students',[
+            'name' => "lkhairul",
+            'course' => "lkhairul",
+            'email' => "lkhairul",
+            'phone' => "lkhairul",
+
+        ]);
+        $response->assertStatus(422);
+        $response->assertSee(__("The phone must be 10 digits."));
+    }
+    public function test_student_add_successfull_api()
+    {
+        $response = $this->post('/api/students',[
+            'name' => "lkhairul",
+            'course' => "lkhairul",
+            'email' => "lkhairul",
+            'phone' => "0121212145",
+
+        ]);
+        $response->assertStatus(200);
+        $response->assertSee(__("Student created successfully"));
+    }
+
+    public function test_login_user_dashboard_test(){
+
+        User::create([
+            'name' => "hasib",
+            'email' => "hasib@hasib.com",
+            'password' => bcrypt("password"),
+        ]);
+
+        $response = $this->post('/login',[
+            'email' => "hasib@hasib.com",
+            'password' => bcrypt("password")
+        ]);
+
+        $response->assertStatus(302);
+        $response->assertRedirect('/');
+
+    }
+
+    public function test_authors_page_auth_user(){
+        $user     = User::factory()->create();
+        $response = $this->actingAs($user)->get('/authors');
+        $response->assertStatus(200);
+    }
+
+    public function test_books_page_auth_user(){
+        $user     = User::factory()->create();
+        $response = $this->actingAs($user)->get('/books');
+        $response->assertStatus(200);
+    }
+
+```
+
