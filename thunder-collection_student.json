@@ -1,0 +1,114 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "student",
+    "dateExported": "2023-05-28T07:35:22.700Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "82170a17-433f-40a2-a3f7-0da82c9ba476",
+            "colId": "e6ba161f-244a-43dc-8b0c-0f52c2d36da3",
+            "containerId": "",
+            "name": "student Updtaed",
+            "url": "http://lara_test_api.test/api/students/3/edit",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2023-05-28T07:33:49.101Z",
+            "modified": "2023-05-28T07:33:49.101Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\" : \"Asraf updated\",\n   \"course\" : \"Asreeaf\",\n    \"email\" : \"eee\",\n   \"phone\" : \"0144751962\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "374d025c-92d6-4766-a164-aed890d7413d",
+            "colId": "e6ba161f-244a-43dc-8b0c-0f52c2d36da3",
+            "containerId": "",
+            "name": "student edit",
+            "url": "http://lara_test_api.test/api/students/3/edit",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2023-05-28T07:34:41.211Z",
+            "modified": "2023-05-28T07:34:41.211Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "c1a1de2f-b858-4410-b305-2407c6c37dcb",
+            "colId": "e6ba161f-244a-43dc-8b0c-0f52c2d36da3",
+            "containerId": "",
+            "name": "student delete",
+            "url": "http://lara_test_api.test/api/students/3/delete",
+            "method": "DELETE",
+            "sortNum": 30000,
+            "created": "2023-05-28T07:34:48.691Z",
+            "modified": "2023-05-28T07:34:48.691Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "ce457838-fcc1-4b4b-9106-1683b27d8616",
+            "colId": "e6ba161f-244a-43dc-8b0c-0f52c2d36da3",
+            "containerId": "",
+            "name": "student add",
+            "url": "http://lara_test_api.test/api/students",
+            "method": "POST",
+            "sortNum": 40000,
+            "created": "2023-05-28T07:34:55.035Z",
+            "modified": "2023-05-28T07:34:55.035Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*",
+                    "isDisabled": true
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)",
+                    "isDisabled": true
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\" : \"Asraf\",\n   \"course\" : \"Asraf\",\n    \"email\" : \"Asraf\",\n   \"phone\" : \"sssss\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "b86a93c0-ce3f-4ba8-b40e-1f9472f6a36c",
+            "colId": "e6ba161f-244a-43dc-8b0c-0f52c2d36da3",
+            "containerId": "",
+            "name": "all students",
+            "url": "http://lara_test_api.test/api/students",
+            "method": "GET",
+            "sortNum": 50000,
+            "created": "2023-05-28T07:35:00.514Z",
+            "modified": "2023-05-28T07:35:00.514Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "d169e646-225c-4cce-b917-075bce0c0af1",
+            "colId": "e6ba161f-244a-43dc-8b0c-0f52c2d36da3",
+            "containerId": "",
+            "name": "student view",
+            "url": "http://lara_test_api.test/api/students/3",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2023-05-28T07:35:18.715Z",
+            "modified": "2023-05-28T07:35:18.715Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}
